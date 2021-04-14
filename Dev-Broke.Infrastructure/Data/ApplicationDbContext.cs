@@ -1,4 +1,5 @@
-﻿using Dev_Broke.App.Models;
+﻿using Dev_Broke.Domain.Entities.AggregatesModel.CompanyAggregate;
+using Dev_Broke.Domain.Models;
 using IdentityServer4.EntityFramework.Options;
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
@@ -8,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Dev_Broke.App.Data
+namespace Dev_Broke.Infrastructure.Data
 {
     public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>
     {
@@ -17,5 +18,9 @@ namespace Dev_Broke.App.Data
             IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
         }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+
     }
 }

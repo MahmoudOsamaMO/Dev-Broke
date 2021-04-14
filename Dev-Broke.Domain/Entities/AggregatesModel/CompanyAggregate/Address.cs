@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Dev_Broke.Domain.Entities.AggregatesModel.CompanyAggregate
 {
-    public class Address // ValueObject
+    public class Address : BaseEntity // ValueObject
     {
         public string Street { get; private set; }
 

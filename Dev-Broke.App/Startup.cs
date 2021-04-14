@@ -1,5 +1,5 @@
-using Dev_Broke.App.Data;
-using Dev_Broke.App.Models;
+using Dev_Broke.Domain.Models;
+using Dev_Broke.Infrastructure.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
