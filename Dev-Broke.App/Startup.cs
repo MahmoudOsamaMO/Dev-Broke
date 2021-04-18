@@ -31,7 +31,7 @@ namespace Dev_Broke.App
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddIdentityServer()
@@ -41,6 +41,7 @@ namespace Dev_Broke.App
                 .AddIdentityServerJwt();
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddServerSideBlazor().AddCircuitOptions(op => { op.DetailedErrors = true; });
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
