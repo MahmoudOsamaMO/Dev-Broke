@@ -1,0 +1,9 @@
+<h1>Company Data</h1>
+<div>
+    <p>company ID : {{company.Id}}</p>
+    <p>company Name :  {{company.Name}}</p>
+    <p>company Address :  {{company.Address}}</p>
+</div>
+<app-company-employee *ngIf="company.Id"  [companyId]="company.Id" >
+
+</app-company-employee>

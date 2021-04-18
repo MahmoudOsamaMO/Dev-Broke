@@ -1,0 +1,21 @@
+<h2>company-employees</h2>
+
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="employees">
+    <thead>
+        <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{ emp.Id }}</td>
+        <td>{{ emp.FirstName }}</td>
+        <td>{{ emp.SecondName }}</td>
+        <td>{{ emp.Address }}</td>
+      </tr>
+    </tbody>
+  </table>
